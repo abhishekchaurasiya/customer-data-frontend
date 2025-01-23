@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.tableData {
+  @apply px-6 py-4 whitespace-nowrap text-sm font-[500];
+}
+
+.tableHead {
+  @apply px-6 py-3 text-left text-sm font-semibold text-gray-50 uppercase tracking-wider cursor-pointer hover:bg-gray-800 transition ease-in duration-200;
+}
