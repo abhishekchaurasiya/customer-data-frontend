@@ -26,7 +26,7 @@ const TableData = () => {
             </tr>
           ) : customers.length === 0 ? (
             <tr>
-              <td colSpan={5} className="px-6 py-4 text-center text-gray-500">
+              <td colSpan={6} className="px-6 py-4 text-center text-gray-500">
                 No customers found
               </td>
             </tr>
