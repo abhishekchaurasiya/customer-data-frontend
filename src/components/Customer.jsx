@@ -9,8 +9,8 @@ const Customer = () => {
   const { error } = userContext();
 
   return (
-    <div className="p-8">
-      <div className=" rounded-lg shadow-md bg-slate-800">
+    <div className="lg:p-8 bg-slate-900">
+      <div className=" lg:rounded-md shadow-md bg-slate-800">
         <Header />
 
         {/* Main content */}
