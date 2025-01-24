@@ -50,7 +50,10 @@ const CustomerContextProvider = ({ children }) => {
         params.append("filterValue", filterValue);
       }
 
-      const response = await axios.get(`${BaseUrl}/customers?${params}`);
+      const response = await axios.get(`${BaseUrl}/customers?${params}`, {
+        withCredentials: true,
+      });
+      console.log(response.data);
       setCustomers(response.data.data);
       setTotalPages(response.data.metadata.totalPages);
       setTotalRecords(response.data.metadata.totalCustomers);
