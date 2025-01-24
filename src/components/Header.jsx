@@ -14,22 +14,25 @@ const Header = () => {
     setPageSize,
     pageSize,
   } = userContext();
+
   return (
-    <div className="p-6 border-b border-gray-300">
-      <div className="flex justify-between items-center mb-4">
-        <h2 className="text-2xl font-bold text-gray-200">
+    <div className="p-4 sm:p-6 border-b border-gray-300 bg-white">
+      {/* Header Section */}
+      <div className="flex flex-col sm:flex-row justify-between items-center mb-4 gap-2 sm:gap-0">
+        <h2 className="text-lg sm:text-2xl font-bold text-gray-800">
           Customer Management
         </h2>
         <button
           onClick={() => setRefreshKey((k) => k + 1)}
-          className="p-2 hover:bg-gray-600 text-white rounded-full"
+          className="p-2 hover:bg-gray-600 text-white rounded-full bg-gray-800"
         >
           <RefreshCw className="h-4 w-4" />
         </button>
       </div>
 
-      <div className="flex flex-col sm:flex-row gap-4">
-        {/* Search */}
+      {/* Search and Filters */}
+      <div className="flex flex-col sm:flex-row sm:items-center gap-4">
+        {/* Search Input */}
         <div className="relative flex-1">
           <Search className="absolute left-3 top-2.5 h-4 w-4 text-gray-400" />
           <input
@@ -41,7 +44,8 @@ const Header = () => {
           />
         </div>
 
-        <div className="flex gap-2 justify-center items-center">
+        {/* Page Size Input */}
+        <div className="flex items-center gap-2">
           <input
             type="number"
             placeholder="Set page limit..."
@@ -52,7 +56,7 @@ const Header = () => {
         </div>
 
         {/* Filters */}
-        <div className="flex gap-2">
+        <div className="flex flex-col sm:flex-row gap-2 sm:gap-4">
           <select
             value={filterField}
             onChange={handleFilterFieldChange}
