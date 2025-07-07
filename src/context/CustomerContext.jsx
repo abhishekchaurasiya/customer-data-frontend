@@ -7,7 +7,7 @@ import axios from "axios";
 import { useEffect } from "react";
 import { createContext, useContext, useState } from "react";
 
-const BaseUrl = `${import.meta.env.VITE_BASE_WEB_URL}/api`;
+const BaseUrl = import.meta.env.VITE_BASE_WEB_URL;
 // const BaseUrl = import.meta.env.VITE_BASE_LOCAL_URL;
 
 const CustomerContext = createContext();
