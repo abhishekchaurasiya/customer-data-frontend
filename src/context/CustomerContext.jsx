@@ -7,7 +7,8 @@ import axios from "axios";
 import { useEffect } from "react";
 import { createContext, useContext, useState } from "react";
 
-const BaseUrl = `https://customer-data-backend-3ifx.onrender.com/api`;
+const BaseUrl = import.meta.env.VITE_BASE_WEB_URL;
+// const BaseUrl = import.meta.env.VITE_BASE_LOCAL_URL;
 
 const CustomerContext = createContext();
 export const userContext = () => useContext(CustomerContext);
